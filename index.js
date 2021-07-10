@@ -53,7 +53,7 @@ server.listen(3000,()=>{
                                ////call function to fill and submit the form
                                //driver.findElements(By.cssSelector("input[type='radio'][name='13'][value='No']"))
                               // driver.findElement({css:"input[type='radio'][name='13'][value='No']"}).click()
-                               example().then((data) => { console.log('form illed successfully')})
+                               fillCovidForm().then((data) => { console.log('form filled successfully')})
                                         .catch(() => { console.log('failed to fill covid form')});
                           })
                })
@@ -77,7 +77,7 @@ server.listen(3000,()=>{
 
 
 
-async function example() {
+async function fillCovidForm() {
           driver.findElement({css:"input[type='radio'][name='13'][value='No']"}).click()
           driver.findElement({css:"input[type='radio'][name='14'][value='No']"}).click()
           driver.findElement({css:"input[type='radio'][name='15'][value='No']"}).click()
